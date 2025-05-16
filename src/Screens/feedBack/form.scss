@@ -1,0 +1,320 @@
+.feedback-form-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden; /* Prevent scrollbars on the container */
+  
+}
+
+.feedback-form-container::before {
+  content: '';
+  position: fixed; /* Keep the background fixed */
+  top: 10;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height:1000vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Ensures the background stays fixed */
+  filter: blur(8px); /* Apply blur effect */
+  z-index: -1; /* Send the background behind content */
+  opacity: 0.8; /* Optional: Add transparency for overlay effect */
+}
+
+.modal-overlay {
+  // height: 1000px;
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.feed-img {
+  width: 100%;
+  height: 100%;
+  max-width: 900px;
+  object-fit: cover;
+}
+
+.form-section {
+  flex: 1;
+  padding: 10px;
+  background-color: #ffffff;
+  overflow-y: auto; /* Enable vertical scrolling without showing scrollbar */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-width: none; /* For Firefox */
+}
+
+.form-section::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.cover {
+  width: 100%;
+  padding: 20px;
+  padding-left: 30px;
+  background-color: transparent;
+}
+
+.feedback-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #053859;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem; /* Reduced gap between fields */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.2rem; /* Reduced gap between label and input field */
+}
+
+label {
+  font-size: 1rem;
+  // font-weight: 500;
+  color: #555;
+  margin-bottom: 0.2rem; /* Reduced margin for compact design */
+}
+
+input,
+textarea,
+select {
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-weight: 300;
+  font-family: 'poppins';
+  transition: border-color 0.3s, box-shadow 0.3s;
+  
+  background-color: #f9f9f9; /* Light background for input fields */
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: #007bff;
+  background-color: #eef6ff; /* Slight hover effect */
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+textarea {
+  resize: none;
+  height: 120px; /* Increased height for better usability */
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  margin-top: 0.8rem; /* Maintain spacing above the submit button */
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+select {
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background-color: #f9f9f9; /* Light background for dropdown */
+  appearance: none; /* Remove default arrow for consistency */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+select:hover {
+  border-color: #007bff;
+  background-color: #eef6ff; /* Slight hover effect */
+}
+
+/* Style for disabled fields */
+input:disabled,
+textarea:disabled,
+select:disabled {
+  background-color: #f5f5f5; /* Light gray background for disabled fields */
+  color: #a9a9a9; /* Gray text color */
+  border: 1px solid #dcdcdc; /* Light gray border */
+  cursor: not-allowed; /* Show 'not-allowed' cursor */
+}
+
+/* Optional: Add some padding and margin for better appearance */
+input:disabled,
+textarea:disabled,
+select:disabled {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Optional: Add hover effect for disabled fields */
+input:disabled:hover,
+textarea:disabled:hover,
+select:disabled:hover {
+  background-color: #e9e9e9; /* Slightly darker gray on hover */
+}
+
+/* Label styling for disabled fields */
+label[for]:has(input:disabled),
+label[for]:has(textarea:disabled),
+label[for]:has(select:disabled) {
+  color: #a9a9a9; /* Gray text color for labels */
+}
+
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+select option {
+  font-size: 1rem;
+  color: #555;
+}
+.close {
+  color: #333;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cancel-button {
+  position: absolute; /* Position it absolutely at the top-right */
+  top: 10px;
+  right: 10px;
+  font-size: 30px; /* Larger font size for the X mark */
+  color: #333; /* Dark color for the X mark */
+  background: none; /* No background */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 0;
+  z-index: 10; /* Ensure it's above other elements */
+  transition: color 0.3s ease;
+}
+
+.cancel-button:hover {
+  color: #f44336; /* Red color on hover */
+}
+
+.cancel-button {
+  position: absolute; /* Position it relative to the modal container */
+  top: 10px;
+  right: 90px;
+  font-size: 30px; /* Larger font size for the X mark */
+  color: #333; /* Dark color for the X mark */
+  background: none; /* No background */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 0;
+  z-index: 10; /* Ensure it's above other elements */
+  transition: color 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .feedback-form-container {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .image-section {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .feed-img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .form-section {
+    margin-top: 1rem;
+  }
+
+  .feedback-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  select {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+    background-position: right 0.8rem center;
+    background-size: 0.8rem;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .submit-button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-title {
+    font-size: 1.3rem;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  select {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    background-position: right 0.6rem center;
+    background-size: 0.6rem;
+  }
+
+  .submit-button {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+}

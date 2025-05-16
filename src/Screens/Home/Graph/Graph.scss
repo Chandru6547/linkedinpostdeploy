@@ -1,0 +1,53 @@
+.Graph {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; // Space between graphs
+    flex-wrap: nowrap; // Prevent wrapping to the next line
+    gap: 20px; // Add spacing between items if needed
+
+    .GraphPortion {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: clamp(500px, 45vw, 50vw); // Increase the width of each graph
+        height: auto;
+        margin: 12px;
+
+        h1 {
+            font-size: clamp(12px, 3vw, 1.5vw); /* Adjust font size for smaller screens */
+            margin-bottom: 20px;
+            text-align: center; /* Center-align text for better readability */
+        }
+
+        .ChartContainer {
+            width: 100%; /* Full width of the parent */
+            height: 300px; /* Smaller height for mobile devices */
+        }
+    }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .Graph {
+        justify-content: center; /* Center-align graphs */
+        padding: auto;
+        gap: 10px; /* Reduce gap between items */
+         flex-wrap: wrap; /* Allow wrapping for smaller screens */
+         margin: 10px;
+
+    }
+
+    .GraphPortion {
+        width: clamp(250px, 90vw, 45vw); /* Further adjust width */
+
+        .ChartContainer {
+            height: 250px; /* Adjust height for smaller screens */
+        }
+
+        h1 {
+            font-size: clamp(10px, 4vw, 1.2vw); /* Make font size smaller */
+            margin-bottom: 15px; /* Reduce margin for smaller screens */
+        }
+    }
+}

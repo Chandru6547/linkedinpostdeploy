@@ -1,0 +1,441 @@
+.Placement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #eff2f7;
+  width: 100vw;
+}
+
+.Placement .Head_wrap {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.Placement .graph{
+  height: 60vh;
+  width: 140vh;
+}
+
+
+
+.Placement .Head_wrap .Header {
+  width: 100%;
+  margin: 0;
+}
+
+.Placement_banner {
+  height: 70vh;
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Placement_banner .banner_left {
+  width: 40vw;
+}
+
+.Placement_banner .banner_left h1 {
+  font-family: Poppins;
+  font-size: clamp(20px, 2.3vw, 2.5vw);
+  font-weight: 700;
+  line-height: clamp(35px, 4vw, 5vw);
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: 100px;
+  color: black;
+}
+
+.Placement_banner .banner_right {
+  width: 60vw;
+  height: 100%;
+  position: relative;
+}
+
+.Placement_banner .banner_right .bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(120px, 10vw, 15vw);
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  animation: bounce 2s infinite linear;
+  border: 1px solid #053859;
+  background: radial-gradient(circle at 75% 30%, white 5px);
+  box-shadow: inset 0 0 20px #fff, inset 10px 0 46px transparent,
+    inset 88px 0px 60px transparent, inset -20px -60px 100px transparent,
+    inset 0 50px 140px #fde9ea, 0 0 90px #fff;
+}
+
+.Placement_banner .banner_right .bubble p {
+  font-size: clamp(12px, 1vw, 3vw);
+}
+
+.Placement_banner .banner_right .bubble p span {
+  font-size: clamp(20px, 1.8vw, 2vw);
+  font-weight: 900;
+}
+
+.Placement_banner .banner_right .first {
+  position: absolute;
+  top: 10vh;
+  left: 5%;
+}
+
+.Placement_banner .banner_right .sec {
+  position: absolute;
+  top: 15vh;
+  left: 45%;
+}
+
+.Placement_banner .banner_right .third {
+  position: absolute;
+  top: 40vh;
+  left: 60%;
+}
+
+.Placement_banner .banner_right .four {
+  position: absolute;
+  top: 35vh;
+  left: 15%;
+}
+
+.Placement h1 {
+  font-family: Poppins;
+  font-size: clamp(25px, 2vw, 2vw);
+  font-weight: 600;
+  line-height: clamp(30px, 3vw, 3.5vw);
+  letter-spacing: 0em;
+  text-align: center;
+  margin: 40px;
+}
+
+.Placement img {
+  height: auto;
+  width: 80%;
+}
+
+.Placement p {
+  font-size: clamp(13px, 1.2vw, 2vw);
+  width: 80%;
+  text-align: center;
+  align-self: center;
+}
+
+
+.Placement .training {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 50px 0;
+  gap: 50px;
+}
+
+.Placement .training .training_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 370px;
+  min-height: 400px;
+  aspect-ratio: 3 / 2;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #053859;
+  color: black;
+  opacity: 0.8;
+  text-align: center;
+  font-size: clamp(15px, 1.1vw, 2.5vw);
+  overflow: visible;  /* Ensure content is visible */
+  word-break: break-word;  /* Allow words to break and wrap onto the next line */
+  white-space: normal;  /* Ensure text wraps and does not get truncated */
+  box-sizing: border-box;  /* Include padding and border in the element's total width and height */
+  flex-grow: 1;  /* Allow the container to grow and accommodate content */
+  font-size: clamp(13px, 1.2vw, 2vw);
+}
+
+
+.PlaceCard_container{
+  width: 100% !important;
+  font-size: clamp(15px,1vw,1.5vw);
+}
+
+.PlaceCard{
+    border-radius: 20px;
+    border: 1px solid grey;
+    background-color: white;
+    width: 350px;
+    height: 450px;
+        padding: 15px;
+    .CardHead{
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        margin: 10px 0px;
+       .circle{
+           height: 80px;
+           aspect-ratio: 1/1;
+           border-radius: 100%;
+           margin-right: 20px;
+           border: 1px solid red;
+       }
+       .desc{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        h1{
+            margin: 0px;
+            font-size: clamp(20px,1.5vw,3vw);
+        }
+        p{
+            width: 100%;
+            display: flex;
+            color: #2B3B43C4;
+            margin: 0px;
+            align-self: flex-start;
+            font-size: clamp(15px,1vw,1.5vw);
+        }
+       }
+   }
+   h5{
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: clamp(13px,0.9vw,1.2vw);
+    line-height: clamp(20px,1.3vw,1.5vw);
+    letter-spacing: 0em;
+    text-align: justified;
+    margin: 30px 0px;
+   }
+ 
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .Placement_banner {
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .Placement_banner .banner_left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+  }
+
+  .Placement_banner .banner_left h1 {
+    font-size: clamp(30px, 2.5vw, 3vw);
+    line-height: clamp(40px, 3vw, 3vw);
+    margin-left: 30px;
+    opacity: 0.8;
+  }
+
+  .Placement_banner .banner_right {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .Placement .training {
+    border-radius: 3px;
+    display: grid;
+    padding: 50px;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Placement_banner {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .Placement_banner .banner_left {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .Placement_banner .banner_left h1 {
+    text-align: center;
+    font-size: clamp(25px, 7vw, 8vw);
+    line-height: clamp(35px, 8vw, 9vw);
+    margin-left: 0;
+  }
+
+  .Placement_banner .banner_right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Placement .training {
+    margin-left: 35px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .Placement .training .training_box {
+    max-width: 100%;
+    font-size: clamp(13px, 1.2vw, 2vw);
+    min-height: 260px;
+  }
+  .Placement h1 {
+    margin: 0%;
+    margin-bottom: 10px;
+  }
+  .Placement .graph{
+  height: 40vh;
+  width: 40vh;
+  margin-bottom: 50px;
+}
+}
+
+
+/* Optional: Style for the swiper navigation buttons */
+.swiper-button-next, .swiper-button-prev {
+  margin-right: 40px;
+  color: #053859; /* Change the color of the arrows */
+  background-color: rgba(255, 255, 255, 0.5); /* Optional: background for arrows */
+  border-radius: 50%; /* Make the arrows round */
+}
+
+
+.Placement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #eff2f7;
+  width: 100vw;
+}
+
+.Head_wrap {
+  width: 100%;
+  background-color: white;
+}
+
+.Placement_banner {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+
+.banner_left h1 {
+  font-family: Poppins, sans-serif;
+  font-size: clamp(20px, 2.3vw, 2.5vw);
+  font-weight: 700;
+  margin-left: 100px;
+  color: black;
+}
+
+.banner_right .bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(120px, 10vw, 15vw);
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  animation: bounce 2s infinite linear;
+  border: 1px solid #053859;
+  background: radial-gradient(circle at 75% 30%, white 5px);
+  box-shadow: inset 0 0 20px #fff, 0 0 90px #fff;
+}
+
+.feedback_slider {
+  width: 100%;
+  margin: 20px auto;
+  font-family: 'poppins';
+  font-size:clamp(16px,1vw,1.5vw);
+}
+
+
+.training_box {
+  align-items: center;
+  justify-content: space-around;
+  max-width: 370px;
+  min-height: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #053859;
+  color: black;
+  text-align: center;
+  font-size: 14px;
+  white-space: normal;
+  position: relative;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.Authortext {
+  position: absolute; /* Position relative to the parent `.training_box` */
+  bottom: 10px; /* Align to the bottom with some space */
+  right: 10px; /* Align to the right with some space */
+  text-align: right; /* Align text within this block to the right */
+  font-weight: bold; /* Optional: Make the text bold */
+  font-size: 0.9rem; /* Adjust font size as needed */
+  color: #333; /* Adjust text color */
+  margin-right: 20px;
+  margin-bottom: 20px
+}
+
+
+@keyframes bounce {
+  50% {
+      transform: translateY(10px); /* Subtle bounce for mobile */
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .PlaceCard{
+    padding: 15px;
+  }
+  .feedback_slider {
+      // padding: 10px 10px; /* Small padding for mobile */
+      gap: 30px;
+  }
+
+  .PlaceCard_container {
+      padding: 5px; /* Minimal padding for the container */
+  }
+
+  .PlaceCard_container {
+      width: 90%; /* Increase card width to utilize more screen space */
+      max-width: 100%; /* Prevent overflow */
+      height: auto; /* Adjust the height dynamically */
+      // aspect-ratio: 3 / 2; /* Maintain a wider aspect ratio */
+  }
+
+  /* Font size adjustments for better readability */
+  .feedback_slider, .PlaceCard_container {
+      font-size: 14px;
+  }
+
+  /* Responsive Images inside cards */
+  img {
+      width: 100%; /* Ensure images fit within the card */
+      height: auto; /* Maintain the aspect ratio */
+  }
+}
+
+

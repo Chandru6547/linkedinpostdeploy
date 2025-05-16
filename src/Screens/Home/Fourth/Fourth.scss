@@ -1,0 +1,81 @@
+.Fourth{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h1{
+        font-family: Poppins;
+        font-weight: 700;
+        font-size: clamp(25px,2.8vw,5vw);
+        line-height: clamp(30px,4vw,4vw);
+        letter-spacing: 0em;
+        text-align: center;
+        color: #053859;
+    }
+    h2{
+        display: flex;
+        width: 100%;
+        align-self: center;
+        font-weight: 500;
+        font-size: clamp(10px,1.5vw,5vw);
+        text-align: center;
+        // background-color: orange;
+    }
+    .Swiper-wrapper{
+        margin: 50px;
+        .mySwiper {
+            width: 100%;
+            height:max-content;
+            padding: 20px 0px;
+            .slide{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                .slideImg{
+                    border-radius: 12px;
+                    margin: 10px 0px;
+                    // border: 15px solid #053859;
+                    // width: clamp(50%,80%,500px);
+                    img{
+                        border-radius: 12px;
+                        width: 100%;
+                        // height: clamp(350px,10vw,10vw);
+                    }
+                }
+                h3,h2{
+                    font-family: Poppins;
+                    font-size: clamp(15px,1.5vw,1.5vw);
+                    line-height:clamp(15px,2vw,5vw);
+                    font-weight: 700;
+                    line-height: 39px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                    color: #053859;
+                    margin: 15px 0px;
+                }
+                h2{
+                    display: flex;
+                    align-self: center;
+                    align-items: center;
+                    justify-content: center;
+                    justify-self: center;
+                    width: fit-content;
+                    padding: 10px;
+                    background-color: #F7C651;
+                    font-size: clamp(12px,1.8vw,1.8vw);
+                    line-height:clamp(15px,3vw,5vw);
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1080px) {
+    .Fourth{
+        height: 80vh;
+        .Swiper-wrapper{
+            margin: 10px;
+        }
+    }
+}

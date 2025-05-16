@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow-x: hidden;
+  &>*{
+    width: 90%;
+  }
+  .icons{
+    z-index: 100;
+    top: 70%;
+    left: 95%;
+    position: fixed;
+    img{
+      height: 60px;
+      margin: 5px 0px;
+      text-shadow: 0px 0px 10px black;
+    }
+  }
+}
+
+@media screen and (max-width:800px){
+  .App{
+    .icons{
+      display: flex;
+      flex-direction: column;
+      top: 80%;
+      left: 85%;
+      img{
+        height: 40px;
+        width: auto;
+        margin: 5px;
+      }
+    }
+  }
+}
+
+
+
