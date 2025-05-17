@@ -404,181 +404,7 @@
   position: relative;       // Or use absolute if necessary
   margin-top: 20px;         // Optional, if using relative positioning
 }
-.Fifth {
-  padding: 20px;
 
-  .Student h1,
-  .Placements h1 {
-    text-align: center;
-    font-weight: 800;
-    font-size: clamp(1.5rem, 2.5vw, 2.8rem);
-    line-height: 1.4;
-    margin-bottom: 30px;
-  }
-
-  .swiper-container {
-    padding: 10px;
-
-    .swiper-slide {
-      display: flex;
-      justify-content: center;
-    }
-
-    .screenshot-container {
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 16px;
-      max-width: 500px;
-      width: 100%;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-
-      .top-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-
-        .profile-section {
-          display: flex;
-          align-items: flex-start;
-
-          .profile-img {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 12px;
-          }
-
-          .info {
-            .name-line {
-              font-weight: 600;
-              font-size: 16px;
-              color: #333;
-
-              .name {
-                margin-right: 4px;
-              }
-
-              .dot {
-                font-weight: 400;
-                color: #666;
-                font-size: 14px;
-              }
-            }
-
-            .title {
-              font-size: 14px;
-              color: #555;
-              margin-top: 2px;
-            }
-
-            .timestamp {
-              font-size: 12px;
-              color: #888;
-              margin-top: 2px;
-            }
-          }
-        }
-
-        .actions {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          margin-top: 8px;
-
-          .follow {
-            color: #0a66c2;
-            font-weight: 500;
-            font-size: 14px;
-            cursor: pointer;
-          }
-
-          .dots {
-            font-size: 20px;
-            cursor: pointer;
-            color: #555;
-          }
-        }
-      }
-
-      .post-body {
-        margin-top: 12px;
-        font-size: 15px;
-        color: #333;
-        line-height: 1.5;
-        word-break: break-word;
-
-        a {
-          color: #0a66c2;
-          text-decoration: none;
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-    }
-  }
-
-  .mt-10 {
-    margin-top: 3rem;
-
-    h1 {
-      text-align: center;
-    }
-
-    .flex {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-
-      .relative {
-        width: 100%;
-        overflow: hidden;
-        height: 175px;
-
-        .animate-bounce-x,
-        .animate-bounce-y {
-          display: flex;
-          animation: bounce 20s linear infinite;
-        }
-
-        img {
-          height: 125px;
-          width: 200px;
-          padding: 15px;
-          border-radius: 12px;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-          filter: grayscale(1);
-          margin: 0 15px;
-        }
-      }
-    }
-  }
-
-  .Placements {
-    margin-top: 40px;
-
-    h1 {
-      margin-bottom: 20px;
-    }
-  }
-}
-
-/* Keyframes */
-@keyframes bounce {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 
 /* Responsive Styling */
 @media (max-width: 768px) {
@@ -659,20 +485,24 @@
     }
 
     .swiper-container {
-      padding: -5px;
+      padding: 5px;
       padding-bottom: 10px !important;
+      margin-bottom: 10px !important;
 
 
       .screenshot-container {
-        padding: 10px;
+        // padding: 10px;
+        width: 290px !important;   
+        min-height: 200px !important; 
 
 
         .top-row {
           flex-direction: column;
+          align-items: flex-start;
 
           .profile-section {
             flex-direction: row;
-            align-items: center;
+            align-items:flex-start;
 
             .profile-img {
               width: 36px;
@@ -688,8 +518,8 @@
               }
 
               .title,
-              .timestamp {
-                font-size: 8px;
+              .timestamp, .connections {
+                font-size: 10px;
               }
             }
           }
@@ -710,7 +540,7 @@
         }
 
         .post-body {
-          font-size: 9.5px;
+          font-size: 8.5px;
           line-height: 1.4;
         }
       }
